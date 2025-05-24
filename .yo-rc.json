@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.7",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0",
+    "libraryName": "ems",
+    "libraryId": "0fa5a7cb-14e9-4b75-83b3-4fe5338a2e71",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "Ems",
+    "solutionShortDescription": "Ems description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
