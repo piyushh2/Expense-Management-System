@@ -1644,12 +1644,13 @@ const New: React.FC<NewProps> = ({ setSelectedMenu, siteUrl, context, EmployeeDe
                 {selectedExpense.Purpose &&
                   <TextField multiline rows={2} sx={{ mt: 1, width: '60%' }} value={selectedExpense.Purpose} disabled />
                 }
-                {selectedExpense.Email !== context.pageContext.user.email && (selectedExpense.Status === "Pending at Manager" || selectedExpense.Status === "Pending at Finance") &&
+                {selectedExpense.ManagerEmail === context.pageContext.user.email && (selectedExpense.Status === "Pending at Manager" || selectedExpense.Status === "Pending at Finance") &&
                   <TextField label={
                     <span>
                       Remarks <span style={{ color: 'red', fontSize: '1.3rem' }}>*</span>
                     </span>
-                  } multiline rows={2} value={remarks} onChange={(e) => setRemarks(e.target.value)} sx={{ mt: 1, width: '60%' }} disabled={!isManager} />
+                  }
+                    multiline rows={2} value={remarks} onChange={(e) => setRemarks(e.target.value)} sx={{ mt: 1, width: '60%' }} disabled={!isManager} />
                 }
               </Box>
               {filteredApprovalHistory.length !== 0 &&
